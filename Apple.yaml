@@ -1,0 +1,143 @@
+name: Apple
+description: Apple services.
+collections:
+- name: iCloud
+  description: Apple's iCloud service.
+  rules:
+  - ruleType: DOMAIN-SUFFIX
+    matchers:
+    - icloud.com
+    - icloud.com.cn
+    - icloud-content.com
+    noResolve: false
+  recommendedPolicy: direct
+- name: Developer
+  description: Apple developer site, including streaming service.
+  rules:
+  - ruleType: DOMAIN
+    matchers:
+    - devimages-cdn.apple.com
+    - developer.apple.com
+    - devstreaming-cdn.apple.com
+    - appleworldwidedeveloper.hb-api.omtrdc.net
+    - appleworldwidedeveloper.sc.omtrdc.net
+    noResolve: false
+  recommendedPolicy: select
+- name: Software Updates
+  description: Software updates.
+  rules:
+  - ruleType: DOMAIN
+    matchers:
+    - gg.apple.com
+    - gnf-mdn.apple.com
+    - gnf-mr.apple.com
+    - gs.apple.com
+    - ig.apple.com
+    - ns.itunes.apple.com
+    - swdownload.apple.com
+    - swpost.apple.com
+    - xp.apple.com
+    noResolve: false
+  recommendedPolicy: select
+- name: Music
+  description: Apple Music streaming.
+  rules:
+  - ruleType: DOMAIN
+    matchers:
+    - audio.itunes.apple.com
+    - streamingaudio.itunes.apple.com
+    - aod.itunes.apple.com
+    noResolve: false
+  recommendedPolicy: select
+- name: TV
+  description: Apple TV Service.
+  rules:
+  - ruleType: DOMAIN-SUFFIX
+    matchers:
+    - tv.apple.com
+    noResolve: false
+  recommendedPolicy: select
+- name: Map
+  description: Apple Location/Map Service.
+  rules:
+  - ruleType: DOMAIN-SUFFIX
+    matchers:
+    - ls.apple.com
+    - gs-loc.apple.com
+    noResolve: false
+  recommendedPolicy: direct
+- name: App Store
+  description: App Store.
+  rules:
+  - ruleType: DOMAIN
+    matchers:
+    - iosapps.itunes.apple.com
+    - osxapps.itunes.apple.com
+    - ppq.apple.com
+    noResolve: false
+  - ruleType: DOMAIN-SUFFIX
+    matchers:
+    - itunes.apple.com
+    - apps.apple.com
+    noResolve: false
+  recommendedPolicy: select
+- name: Content Caching
+  description: ''
+  rules:
+  - ruleType: DOMAIN
+    matchers:
+    - lcdn-registration.apple.com
+    - suconfig.apple.com
+    noResolve: false
+  recommendedPolicy: direct
+- name: Blocked
+  description: Blocked apple services.
+  rules:
+  - ruleType: DOMAIN-SUFFIX
+    matchers:
+    - blobstore.apple.com
+    - bookkeeper.itunes.apple.com
+    - hls.itunes.apple.com
+    - books.itunes.apple.com
+    - mvod.itunes.apple.com
+    - init.itunes.apple.com
+    - play.itunes.apple.com
+    - ld-4.itunes.apple.com
+    - se2.itunes.apple.com
+    - client-api.itunes.apple.com
+    - p43-buy.itunes.apple.com
+    - itunesu.itunes.apple.com
+    noResolve: false
+  - ruleType: DOMAIN
+    matchers:
+    - music.apple.com
+    noResolve: false
+  recommendedPolicy: select
+- name: Certificate
+  description: Apple devices must be able to connect to the following hosts to validate
+    digital certificates used by the hosts listed above.
+  rules:
+  - ruleType: DOMAIN
+    matchers:
+    - crl.apple.com
+    - crl.entrust.net
+    - crl3.digicert.com
+    - crl4.digicert.com
+    - ocsp.apple.com
+    - ocsp.digicert.com
+    - ocsp.entrust.net
+    - ocsp.verisign.net
+    noResolve: false
+  recommendedPolicy: proxy
+- name: Route
+  description: The entire 17.0.0.0/8 address block is assigned to Apple.
+  rules:
+  - ruleType: DOMAIN-SUFFIX
+    matchers:
+    - apple.com
+    noResolve: false
+  - ruleType: IP-CIDR
+    matchers:
+    - 17.0.0.0/8
+    noResolve: false
+  recommendedPolicy: direct

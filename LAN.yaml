@@ -1,0 +1,27 @@
+name: LAN
+description: Rules for local area network.
+collections:
+- name: CLAN
+  description: Big C**** LAN.
+  rules:
+  - ruleType: GEOIP
+    matchers:
+    - CN
+    noResolve: false
+  recommendedPolicy: direct
+- name: LAN
+  description: Normal LAN addresses.
+  rules:
+  - ruleType: IP-CIDR
+    matchers:
+    - 10.0.0.0/8
+    - 100.64.0.0/10
+    - 127.0.0.0/8
+    - 172.16.0.0/12
+    - 192.168.0.0/16
+    noResolve: false
+  - ruleType: IP-CIDR6
+    matchers:
+    - fe80::/10
+    noResolve: false
+  recommendedPolicy: direct

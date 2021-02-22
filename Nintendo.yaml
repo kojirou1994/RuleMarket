@@ -1,0 +1,12 @@
+name: Nintendo
+description: Nintendo services.
+collections:
+- name: Nintendo
+  description: ''
+  rules:
+  - ruleType: DOMAIN-SUFFIX
+    matchers:
+    - nintendo.com
+    - nintendo.net
+    noResolve: false
+  recommendedPolicy: select
