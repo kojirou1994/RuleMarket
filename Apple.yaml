@@ -18,6 +18,7 @@ collections:
     matchers:
     - devimages-cdn.apple.com
     - developer.apple.com
+    - download.developer.apple.com
     - devstreaming-cdn.apple.com
     - appleworldwidedeveloper.hb-api.omtrdc.net
     - appleworldwidedeveloper.sc.omtrdc.net
