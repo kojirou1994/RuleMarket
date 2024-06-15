@@ -56,6 +56,9 @@ collections:
   - ruleType: DOMAIN-SUFFIX
     matchers:
     - tv.apple.com
+    - hls-svod-aoc-ve.itunes.g.aaplimg.com
+    - tv.g.apple.com
+    - tv.v.aaplimg.com
     noResolve: false
   recommendedPolicy: select
 - name: Map
